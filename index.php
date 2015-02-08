@@ -12,6 +12,8 @@ while($row = $pollsQuery->fetchObject()) {
     $polls[] = $row;
 }
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +28,7 @@ while($row = $pollsQuery->fetchObject()) {
         <?php if(!empty($polls)): ?>
             <ul>
                 <?php foreach ($polls as $poll): ?>
-                    <li><a href="poll.php?id=<?php echo $poll->id; ?>"><?php echo $poll->question; ?></a></li>
+                    <li><a href="poll.php?poll=<?php echo $poll->id; ?>"><?php echo $poll->question; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         <?php else: ?>
