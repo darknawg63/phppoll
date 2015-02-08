@@ -38,6 +38,7 @@ if(isset($_POST['poll'], $_POST['choice'])) {
     ]);
 
     header('Location: poll.php?poll=' . $poll);
+    exit();
 }
 
 header('Location: index.php');
